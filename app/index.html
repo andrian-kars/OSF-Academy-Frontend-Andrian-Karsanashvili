@@ -14,8 +14,10 @@
 
     <!-- Styles -->
     <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- TODO: must be done with Gulp -->
     <link rel="stylesheet" href="css/main.min.css">
-    <!-- Fonts -->
 
     <!-- FavIcons -->
     <!-- Here they go -->
@@ -23,9 +25,233 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>hello, world</h1>
-    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__whrapper container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"><img class="logo__image" src="img/osf/logo.png" alt="osf-logo"></a>
+                <div class="logo__text-whrapper">
+                    <h1 class="logo__heading">OSF</h1>
+                    <p class="logo__subtitle">Academy</p>
+                </div>
+            </div>
+            <!-- // Logo -->
+            <!-- Navigation -->
+            <nav class="navigation">
+                <div class="navigation__item services">
+                    <a class="navigation__link_main" href="#">Services
+                        <img class="navigation__image" src="img/icons/drop-button.png" alt="drop-button">
+                    </a>
+                    <!-- Dropdown -->
+                    <div class="services__dropdown">
+                        <div class="services__sections">
+                            <h4 class="services__heading">Product Categories</h4>
+                            <div class="services__row">
+                                <div class="services__column">
+                                    <a class="services__link" href="error404.html">Accesspries</a>
+                                    <a class="services__link" href="error404.html">Alcohol</a>
+                                    <a class="services__link" href="error404.html">Art</a>
+                                    <a class="services__link" href="error404.html">Books</a>
+                                    <a class="services__link" href="error404.html">Drink</a>
+                                    <a class="services__link" href="error404.html">Electronics</a>
+                                    <a class="services__link" href="error404.html">Flowers & Plants</a>
+                                    <a class="services__link" href="error404.html">Food</a>
+                                </div>
+                                <div class="services__column">
+                                    <a class="services__link" href="error404.html">Gadgets</a>
+                                    <a class="services__link" href="error404.html">Garden</a>
+                                    <a class="services__link" href="error404.html">Grocery</a>
+                                    <a class="services__link" href="error404.html">Home</a>
+                                    <a class="services__link" href="error404.html">Jewelry</a>
+                                    <a class="services__link" href="error404.html">Kids & Baby</a>
+                                    <a class="services__link" href="error404.html">Men's Fashion</a>
+                                    <a class="services__link" href="error404.html">Mobile</a>
+                                </div>
+                                <div class="services__column services__column_last-child">
+                                    <a class="services__link" href="error404.html">Motorcycles</a>
+                                    <a class="services__link" href="error404.html">Movies</a>
+                                    <a class="services__link" href="error404.html">Music</a>
+                                    <a class="services__link" href="error404.html">Office</a>
+                                    <a class="services__link" href="error404.html">Pets</a>
+                                    <a class="services__link" href="error404.html">Romantic</a>
+                                    <a class="services__link" href="error404.html">Sport</a>
+                                    <a class="services__link" href="error404.html">Toys</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sections services__sections_margin">
+                            <h4 class="services__heading services__heading_last-child">Sale</h4>
+                            <div class="services__row">
+                                <div class="services__column services__column_last-child">
+                                    <a class="services__link" href="error404.html">Accesspries</a>
+                                    <a class="services__link" href="error404.html">Alcohol</a>
+                                    <a class="services__link" href="error404.html">Art</a>
+                                    <a class="services__link" href="error404.html">Books</a>
+                                    <a class="services__link" href="error404.html">Drink</a>
+                                    <a class="services__link" href="error404.html">Electronics</a>
+                                    <a class="services__link" href="error404.html">Flowers & Plants</a>
+                                    <a class="services__link" href="error404.html">Food</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__sections">
+                            <img class="services__image" src="img/background/f-girl.png" alt="featured-products">
+                        </div>
+                    </div>
+                    <!-- // Dropdown -->
+                </div>
+                <div class="navigation__item"><a class="navigation__link" href="error404.html">Company</a></div>
+                <div class="navigation__item"><a class="navigation__link" href="error404.html">Library</a></div>
+                <div class="navigation__item"><a class="navigation__link navigation__link_last-child"
+                        href="error404.html">Contact us</a>
+                </div>
+            </nav>
+            <!-- // Navigation -->
+            <!-- Chosen Value -->
+            <div class="chosen-value">
+                <ul class="chosen-value__value languadge">
+                    <li class="chosen-value__item_main"><span>en<img class="chosen-value__image"
+                                src="img/icons/drop-button.png" alt="drop-button"></span>
+                        <ul class="chosen-value__drop-down">
+                            <li><a class="chosen-value__item chosen-value__item_first-child" href="error404.html">de</a>
+                            </li>
+                            <li><a class="chosen-value__item" href="error404.html">ua</a></li>
+                            <li><a class="chosen-value__item" href="error404.html">fr</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="chosen-value__value currency">
+                    <li class="chosen-value__item_main"><span>$ us<img class="chosen-value__image"
+                                src="img/icons/drop-button.png" alt="drop-button"></span>
+                        <ul class="chosen-value__drop-down">
+                            <li><a class="chosen-value__item chosen-value__item_first-child" href="error404.html">$
+                                    ca</a></li>
+                            <li><a class="chosen-value__item" href="error404.html">eur</a></li>
+                            <li><a class="chosen-value__item" href="error404.html">uah</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- // Chosen Value -->
+            <!-- Login & Mini-cart -->
+            <div class="login-cart">
+                <div class="login-cart__content">
+                    <a class="login-cart__icon" href="error404.html"><img
+                            class="login-cart__image login-cart__image_smaller" src="img/icons/search.png"
+                            alt="search"></a>
+                </div>
+                <div class="login-cart__content">
+                    <a class="login-cart__icon" href="error404.html"><img
+                            class="login-cart__image login-cart__image_smaller" src="img/icons/profile.png"
+                            alt="profile"></a>
+                </div>
+                <div class="login-cart__content">
+                    <a class="login-cart__icon" href="error404.html"><img class="login-cart__image"
+                            src="img/icons/heart.png" alt="search"></a>
+                </div>
+                <div class="login-cart__content">
+                    <a class="login-cart__icon" href="error404.html"><img class="login-cart__image"
+                            src="img/icons/shopping-bag.png" alt="profile"></a>
+                </div>
+            </div>
+            <!-- // Login & Mini-cart -->
+        </div>
+    </header>
+    <!-- // Header -->
+    <!-- Main -->
+    <main class="main">
+        <!-- Slider and Facebook-follow -->
+        <div class="slider-facebok container">
+            <div class="row">
+                <div class="slider carousel slide col-12 col-xl-9" data-right="carousel" id="slides">
+                    <ul class="carousel-indicators slider__indicators">
+                        <li class="active" data-target="#slides" data-slide-to="0"></li>
+                        <li data-target="#slides" data-slide-to="1"></li>
+                        <li data-target="#slides" data-slide-to="2"></li>
+                        <li data-target="#slides" data-slide-to="3"></li>
+                        <li data-target="#slides" data-slide-to="4"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item slider__item slider__item_one active">
+                            <p class="slider__heading">Control and manage any</p>
+                            <p class="slider__heading slider__heading_last-child">device with cloud solutions</p>
+                            <p class="slider__subtitle">Improve business performance and the user experience</p>
+                            <p class="slider__subtitle slider__subtitle_last-child">with the right mix of IoT technology
+                                and processes
+                            </p>
+                            <a class="slider__link" href="#">View more</a>
+                        </div>
+                        <div class="carousel-item slider__item slider__item_two">
+                            <p class="slider__heading">Control and manage any</p>
+                            <p class="slider__heading slider__heading_last-child">device with cloud solutions</p>
+                            <p class="slider__subtitle">Improve business performance and the user experience</p>
+                            <p class="slider__subtitle slider__subtitle_last-child">with the right mix of IoT technology
+                                and processes
+                            </p>
+                            <a class="slider__link" href="#">View more</a>
+                        </div>
+                        <div class="carousel-item slider__item slider__item_three">
+                            <p class="slider__heading">Control and manage any</p>
+                            <p class="slider__heading slider__heading_last-child">device with cloud solutions</p>
+                            <p class="slider__subtitle">Improve business performance and the
+                                user experience</p>
+                            <p class="slider__subtitle slider__subtitle_last-child">with the right mix of IoT technology
+                                and processes
+                            </p>
+                            <a class="slider__link" href="#">View more</a>
+                        </div>
+                        <div class="carousel-item slider__item slider__item_four">
+                            <p class="slider__heading">Control and manage any</p>
+                            <p class="slider__heading slider__heading_last-child">device with cloud solutions</p>
+                            <p class="slider__subtitle">Improve business performance and the user experience</p>
+                            <p class="slider__subtitle slider__subtitle_last-child">with the right mix of IoT technology
+                                and processes
+                            </p>
+                            <a class="slider__link" href="#">View more</a>
+                        </div>
+                        <div class="carousel-item slider__item slider__item_five">
+                            <p class="slider__heading">Control and manage any</p>
+                            <p class="slider__heading slider__heading_last-child">device with cloud solutions</p>
+                            <p class="slider__subtitle">Improve business performance and the user experience</p>
+                            <p class="slider__subtitle slider__subtitle_last-child">with the right mix of IoT technology
+                                and processes
+                            </p>
+                            <a class="slider__link" href="#">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <aside class="facebook-follow d-xl-flex col-xl-3">
+                    <div class="facebook-follow__window">
+                        <p class="facebook-follow__sale">55%</p>
+                        <p class="facebook-follow__description">Summer sales</p>
+                    </div>
+                    <p class="facebook-follow__heading">Follow us on Facebook</p>
+                    <p class="facebook-follow__subtitle">Sed ut perspiciatis unde omnis iste natus error sit</p>
+                    <a class="facebook-follow__link" target="_blank" href="https://facebook.com"><i
+                            class="fa fa-facebook facebook-follow__icon" aria-hidden="true"></i>Follow</a>
+                </aside>
+
+            </div>
+        </div>
+        <!-- // Slider and Facebook-follow -->
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <!-- // Main -->
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+    <!-- // Footer -->
 
     <!-- Vendor Scripts -->
     <!-- jQuery, Popper and Bootstap -->
@@ -34,6 +260,7 @@
     <!-- Custom Scripts -->
     <script src="js/main.js"></script>
     <!-- Here they go -->
+
 </body>
 
 </html>
