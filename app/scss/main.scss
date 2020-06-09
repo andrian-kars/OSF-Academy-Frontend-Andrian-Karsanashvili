@@ -9,7 +9,7 @@
 .header {
     background-color: $white;
     text-transform: uppercase;
-    border-bottom: 2px solid rgb(232, 226, 214);;
+    border-bottom: 1px solid rgb(232, 226, 214);;
 
     &__whrapper {
         position: relative;
@@ -323,7 +323,7 @@
 // ----- Main -----
 // Slider and Facebook-follow
 .slider-facebok {
-    margin-top: 25px;
+    margin-top: 26px;
 }
 
 .slider {
@@ -354,31 +354,31 @@
         background-repeat: no-repeat;
         background-size: cover;
         padding: 68px 59px;
-    }
-    
-    &__item_one {
-        background-image: url(../img/background/bg-slider-one.jpg);
-        text-align-last: left;
-    }
 
-    &__item_two {
-        background-image: url(../img/background/bg-slider-two.jpg);
-        text-align: center;
-    }
+        &_one {
+            background-image: url(../img/background/bg-slider-one.jpg);
+            text-align-last: left;
+        }
 
-    &__item_three {
-        background-image: url(../img/background/bg-slider-three.jpg);
-        text-align: right;
-    }
+        &_two {
+            background-image: url(../img/background/bg-slider-two.jpg);
+            text-align: center;
+        }
 
-    &__item_four {
-        background-image: url(../img/background/bg-slider-one.jpg);
-        text-align-last: left;
-    }
+        &_three {
+            background-image: url(../img/background/bg-slider-three.jpg);
+            text-align: right;
+        }
 
-    &__item_five {
-        background-image: url(../img/background/bg-slider-two.jpg);
-        text-align: center;
+        &_four {
+            background-image: url(../img/background/bg-slider-one.jpg);
+            text-align-last: left;
+        }
+
+        &_five {
+            background-image: url(../img/background/bg-slider-two.jpg);
+            text-align: center;
+        }
     }
 
     &__heading {
@@ -513,12 +513,324 @@
             left: 22px
         }
 }
-// Slider and Facebook-follow
+// ----- Slider and Facebook-follow -----
 
+// ----- Products -----
+.products {
+    background-color: $bg-dark-blue;
+    margin-top: 29px;
+    padding-top: 65px;
+    padding-bottom: 57px;
 
+    &__head-whrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 19px;
+    }
 
+    &__line {
+        border-bottom: 2px solid #383E46;
+        max-width: 45%;
+        min-width: 39%;
+        margin-bottom: 36px;
+    }
 
+    &__heading {
+        color: $white;
+        width: 170px;
+        min-width: 10%;
+        text-align: center;
+        font-size: 24px;
+        margin: 20px;
+        font-weight: 900;
+    }
 
+    &__row {
+        margin-bottom: 30px;
+    }
 
+    &__item {
+        position: relative;
+        height: 365px;
+        width: auto;
+
+        &:hover .products__hover {
+            display: flex;
+        }
+    }
+    
+    &__photo {
+        height: 260px;
+        border-radius: 6px 6px 0 0;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &_full {
+            height: 100%;
+            border-radius: 6px;
+            
+
+            &:hover {}
+        }
+
+        &_one {
+            background-image: url(../usercontent/products/product-one.jpg);
+        }
+
+        &_two {
+            background-image: url(../usercontent/products/product-two.jpg);
+        }
+
+        &_three {
+            background-image: url(../usercontent/products/product-three.jpg);
+        }
+
+        &_four {
+            background-image: url(../usercontent/products/product-four.jpg);
+        }
+
+        &_five {
+            background-image: url(../usercontent/products/product-five.jpg);
+        }
+
+        &_six {
+            background-image: url(../usercontent/products/product-six.jpg);
+        }
+
+        &_seven {
+            background-image: url(../usercontent/products/product-seven.jpg);
+        }
+
+        &_eight {
+            background-image: url(../usercontent/products/product-eight.jpg);
+        }
+    }
+
+    &__gradient {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: linear-gradient(rgba(220,89,135,0.8),rgba(103,91,153,0.8));
+        position: absolute;
+        left: 15px;
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        border-radius: 6px;
+        padding: 31px 31px 33px;
+        font-size: 16px;
+        color: $white;
+
+        &_text {
+            width: 150px;
+        }
+
+        &_counter {
+            text-transform: uppercase;
+            font-size: 14px;
+            margin: 26px 0 0 39px;
+        }
+
+        &_image {
+            position: absolute;
+            height: 28px;
+            width: 24px;
+            bottom: 39px;
+            left: 34px;
+        }
+    }
+
+    &__hover {
+        display: none;
+        justify-content: center;
+        position: absolute;
+        left: 15px;
+        height: 365px;
+        width: 270px;
+        border-radius: 6px;
+        background-image: linear-gradient( 90deg, rgba(28,193,103,0.9) 0%, rgba(46,211,162,0.9) 100%);
+        transition: $transition;
+    }
+
+    &__button {
+        background-color: $white;
+        padding: 31px;
+        border-radius: 50%;
+        border: 0;
+        margin: auto 20px auto 0;
+        outline: none;
+        transition: $transition;
+
+        &:active, &:visited, &:focus {
+            outline: none;
+        }
+
+        &:active {
+            background-color: $bg-peach;
+            transition: all 0.1s ease-in;
+        }
+
+        &:hover {
+            opacity: 75%;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        & img {
+            height: 28px;
+            width: 28px;
+        }
+    }
+
+    &__description {
+        height: 105px;
+        background-color: $white;
+        border-radius: 0 0 6px 6px;
+        padding: 7px 0 12px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-size: 16px;
+        color: #1C3C50;
+        text-align: center;
+        line-height: 1.1;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        &_link {
+
+            &:visited {
+                color:#1C3C50;
+            }
+
+            &:hover {
+                text-decoration: none;
+                color:#1C3C50;
+                opacity: 50%;
+                transition: $transition;
+            }
+        }
+    }
+
+    &__price {
+        color: #001147;
+        text-align: center;
+        letter-spacing: -0.9px;
+        padding-bottom: 3px;
+    }
+
+    &__buy-now {
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        margin: -5px 0 -4px 0;
+
+        &_price {
+            color: #00CE83;
+            border: 1.5px solid #BABCBE;
+            border-right: 0.5px solid #BABCBE;
+            padding: 9px 15px 7px 21px;
+            border-top-left-radius: 10em 10em;
+            border-bottom-left-radius: 10em 10em;
+
+            &:visited {
+                color: #00CE83;
+            }
+
+            &:hover {
+                text-decoration: none;
+                color: #00CE83;
+                opacity: 50%;
+                transition: $transition;
+            }
+        }
+
+        &_button {
+            background-color: $white;
+            padding: 9px 23px 7px 20px;
+            border: 1.5px solid #BABCBE;
+            border-left: 1px solid #BABCBE;
+            border-top-right-radius: 10em 10em;
+            border-bottom-right-radius: 10em 10em;
+            outline: none;
+            transition: $transition;
+            text-transform: uppercase;
+
+            &:active, &:visited, &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                color: $white;
+                background-color: $bg-osf;
+            }
+        }
+    }
+
+    &__load-more {
+        display: block;
+        margin: 49px auto 0;
+        text-transform: uppercase;
+        color: $white;
+        font-size: 14px;
+        background-color: transparent;
+        border: 1.5px solid $white;
+        padding: 10px 48px 7px 91px;
+        border-radius: 25px;
+        outline: none;
+        transition: $transition;
+
+        &:active, &:visited, &:focus {
+            outline: none;
+        }
+
+        &:active {
+            background-color: $bg-peach;
+            transition: all 0.1s ease-in;
+        }
+
+        &:hover {
+            opacity: 75%;
+        }
+
+        &_image {
+            margin-left: 18px;
+        }
+    }
+}
+// ----- // Products -----
+
+// ----- OSF Banner -----
+.osf-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 445px;
+    background-image: url(../img/background/osf-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: $white;
+    &__heading {
+        font-size: 48.49px;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+    
+    &__subtitle {
+        max-width: 340px;
+        margin: 0 auto;
+        font-size: 14.14px;
+    }
+}
+// ----- // OSF Banner -----
 
 
