@@ -1,6 +1,6 @@
 $(function () {
 
-    // drop-down menu
+    // ----- Drop-down Menu -----
     let dropMain = document.getElementsByClassName('navigation__item');
     let dropChosen = document.getElementsByClassName('chosen-value__item_main');
 
@@ -35,17 +35,56 @@ $(function () {
             return false;
         }
     }
+    // ----- // Drop-down Menu -----
 
+    // ----- Slick Slider -----
+    $('.slider-slick__slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay: true,
+        appendArrows: $('.slider-slick__arrows'),
+        autoplaySpeed: 5000,
+        pauseOnDotsHover: true,
+        responsive: [
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: false,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+    // ----- // Slick Slider -----
 
-
-
-
-    // Slick Slider
-    $('.slider-slick__slider').slick();
-
-
-
-
+    // ----- Current Year -----
+    new Date().getFullYear();
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    // ----- // Current Year -----
 
 
 

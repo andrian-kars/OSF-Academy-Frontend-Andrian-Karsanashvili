@@ -5,11 +5,19 @@
 // @import "../../";
 // @import "../../";
 
+@media only screen and (min-width: 768px) {
+        
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+
 // ----- Header -----
 .header {
     background-color: $white;
     text-transform: uppercase;
-    border-bottom: 1px solid rgb(232, 226, 214);;
+    border-bottom: 1px solid rgb(232, 226, 214);
 
     &__whrapper {
         position: relative;
@@ -22,8 +30,15 @@
 
 // ----- Logo -----
 .logo {
-    display: flex;
-    // margin-right: 130px;
+    
+    
+    @media only screen and (min-width: 768px) {
+        display: flex;
+	}
+
+	@media only screen and (min-width: 1200px) {
+
+	}
 
     &__image {
         width: 63px;
@@ -32,6 +47,15 @@
     }
 
     &__text-whrapper {
+        display: none;
+
+        @media only screen and (min-width: 768px) {
+        display: block;
+        }
+
+        @media only screen and (min-width: 1200px) {
+
+        }   
     }
 
     &__heading {
@@ -56,14 +80,29 @@
 
 // ----- Navigation -----
 .navigation {
-    margin: 15px 0 0 151px;
+    // margin: 15px 0 0 151px;
     padding: 0;
     font-size: 13px;
-    width: 400px;
+
+    @media only screen and (min-width: 768px) {
+        width: 400px;
+        margin: 15px 0 0 151px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+    }  
 
     &__item {
-        display: inline-block;
-        // margin: 0 10px 0 0;
+        display: none;
+
+        @media only screen and (min-width: 768px) {
+            display: inline-block;
+        }
+
+        @media only screen and (min-width: 1200px) {
+
+        }  
 
         &:last-child {
             margin: 0;
@@ -216,12 +255,21 @@
 
 // ----- Drop-down values -----
 .chosen-value {
-    display: flex;
-    color: rgba(69, 65, 62, 0.502);
-    text-align: left;
-    text-transform: uppercase;
-    width: 185px;
-    z-index: 2;
+    display: none;
+        
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        display: flex;
+        color: rgba(69, 65, 62, 0.502);
+        text-align: left;
+        text-transform: uppercase;
+        width: 185px;
+        z-index: 2;
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+        }
 
     &__image {
         margin: 0 0 0 9px;
@@ -242,7 +290,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 6px 0 6px 17px;
+        padding: 6px 0 7px 17px;
     }
 
     &__item {
@@ -256,6 +304,10 @@
         &_first-child {
             padding-top: 5px 0 5px;
             border-top: 1px solid rgba(69, 65, 62, 0.502);
+
+            &:hover {
+                border-top: 1px solid rgba(255, 255, 255, 0.8);
+            }
         }
         
         &:visited {
@@ -264,8 +316,8 @@
 
         &:hover {
             text-decoration: none;
-            color: rgba(69, 65, 62, 0.502);
-            background-color: rgba(69, 65, 62, 0.075);
+            color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.3);
             transition: $transition;
         }
     }
@@ -321,7 +373,7 @@
 // ----- // Header -----
 
 // ----- Main -----
-// Slider and Facebook-follow
+// ----- Slider and Facebook-follow -----
 .slider-facebok {
     margin-top: 26px;
 }
@@ -513,7 +565,7 @@
             left: 22px
         }
 }
-// ----- Slider and Facebook-follow -----
+// ----- // Slider and Facebook-follow -----
 
 // ----- Products -----
 .products {
@@ -608,6 +660,7 @@
     }
 
     &__gradient {
+        height: 365px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -835,8 +888,17 @@
 
 // ----- Slick Slider -----
 .slider-slick {
-    margin-top: 0;
-    padding-top: 65px;
+    display: none;
+    @media only screen and (min-width: 768px) {
+        display: block;
+        min-width: 0;
+        margin-top: 0;
+        padding: 37px 0 34px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+    }
 
     &__head-whrapper {
         display: flex;
@@ -854,52 +916,340 @@
         font-size: 18px;
     }
 
-    &__slider {
+    &__arrows {
+        position: relative;
+        margin: 1px 0 0px;
+        
+        & .slick-arrow{
+            position: absolute;
+            top: 0;
+            background-color: transparent;
+            width: 30px;
+            height: 30px;
+            font-size: 0;
+            z-index: 3;
+            outline: none;
+            border: none;
 
-        /* Слайдер */
-        & .slick-slider{}
-        /* Слайдер запущен */
-        & .slick-slider.slick-initialized{}
-        /* Слайдер с точками */
-        & .slick-slider.slick-dotted{}
-        /* Ограничивающая оболочка */
-        & .slick-list {}
-        /* Лента слайдов */
-        & .slick-track{
-            display: flex;
-            flex-direction: row;
+             &:active, &:visited, &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                background-color: $osf-brown;
+            }
         }
-        /* Слайд */
-        & .slick-slide{}
-        /* Слайд активный (показывается) */
-        & .slick-slide.slick-active{}
-        /* Слайд основной */
-        & .slick-slide.slick-current{}
-        /* Слайд по центру */
-        & .slick-slide.slick-center{}
-        /* Клонированный слайд */
-        & .slick-slide.slick-cloned{}
-        /* Стрелка */
-        & .slick-arrow{}
         /* Стрелка влево */
-        & .slick-arrow.slick-prev{}
+        & .slick-arrow.slick-prev{
+            left: 289px;
+            background-image: url(../img/icons/arrow-left.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         /* Стрелка вправо */
-        & .slick-arrow.slick-next{}
-        /* Стрелка не активная */
-        & .slick-arrow.slick-disabled{}
-        /* Точки (булиты) */
-        & .slick-dots{}
-        & .slick-dots li{}
-        /* Активная точка */
-        & .slick-dots li.slick-active{}
-        /* Элемент точки */
-        & .slick-dots li button{}
+        & .slick-arrow.slick-next{
+            right: 289px;
+            background-image: url(../img/icons/arrow-right.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__lines {
+        display: inline-block;
+        background-image: url(../img/background/slider-lines.jpg);
+        width: 520px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+    }
+
+    &__slider {
+        min-width: 0;
+        position: relative;
+        padding-top: 24px;
+
+        & .slick-list {
+            overflow: hidden;
+        }
+
+        & .slick-slide{
+            outline: none;
+
+            &, & a, & button:active {
+                outline: none;
+
+            }
+        }
+        
+        & .slick-dots {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0;
+            margin: 30px 40% 0;
+        }
+
+        & .slick-dots li button {
+            outline: none;
+            border: none;
+            background-color: #939599;
+            width: 9px;
+            height: 16px;
+            border-radius: 100%;
+            border: 2px solid $bg-dark-blue;
+
+            .slick-dots li button:last-child {
+                margin-right: 0;
+            }
+        }
+
+        & .slick-dots li.slick-active button {
+            background-color: transparent;
+            width: 9px;
+            height: 16px;
+            border: 2px solid #fff;
+            border-radius: 100%;
+        }
+        
     }
 
     &__item {
-        display: flex;
-            flex-direction: row;
+        
     }
-
 }
 // ----- // Slick Slider -----
+
+// ----- Services -----
+.sevices-static {
+    background: $bg-brown;
+    height: 573px;
+
+    @media only screen and (min-width: 768px) {
+
+    }
+
+    @media only screen and (min-width: 1200px) {
+        height: 198.5px;
+        
+    }
+
+    &__whrapper {
+        height: 573px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 0;
+        
+        @media only screen and (min-width: 768px) {
+            align-items: center;
+            flex-direction: row;
+        }
+
+        @media only screen and (min-width: 1200px) {
+            height: 198.5px;
+            padding: 0;
+        }
+    }
+
+    &__facility {
+        display: flex;
+        margin: 0;
+
+        @media only screen and (min-width: 768px) {
+            align-items: center;
+            flex-direction: row;
+        }
+
+        @media only screen and (min-width: 1200px) {
+            margin-top: 12px;
+        }
+
+        &:last-child {
+            // margin-right: 25px;
+        }
+    }
+
+    &__image {
+        max-height: 67px;
+        width: auto;
+        margin: 0 45px;
+
+        @media only screen and (min-width: 768px) {
+
+        }
+
+        @media only screen and (min-width: 1200px) {
+            max-width: 100%;
+            height: 100%;
+            margin: 0 40px 0 0;
+            // padding: 0;
+        }
+        
+    }
+
+    &__description {
+        position: relative;
+    }
+
+    &__title {
+        color: $white;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 10px;
+
+    }
+
+    &__subtitle {
+        width: 145px;
+        color: #84807D;
+        font-size: 14px;
+        margin: 0;
+
+        @media only screen and (min-width: 768px) {
+
+        }
+
+        @media only screen and (min-width: 1200px) {
+            width: 250px;
+            margin-bottom: 1em;
+        }
+    }
+}
+// ----- // Services -----
+// ----- Main -----
+
+// ----- Footer -----
+.footer {
+    display: none;
+    background-color: $white;
+    height: 345px;
+    padding-top: 36.5px;
+    font-size: 13px;
+
+    @media only screen and (min-width: 768px) {
+        display: block;
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__section {
+        
+        &_one {
+            margin-right: -20px;
+            line-height: 1.45;
+        }
+
+        &_two {
+            width: 497px;
+        }
+
+        &_whrapper {
+            width: 497px;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+        }
+
+        &_three {
+
+        }
+    }
+    
+    &__copyrighting {
+        margin-bottom: 28px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 20.5px;
+
+        &_first-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__contacts {
+
+    }
+
+    &__item {
+
+        a {
+            color: $black;
+            transition: $transition;
+            text-decoration: none;
+
+            &:visited, a:active {
+                color: $black;
+            }
+
+            &:hover {
+                color: $black;
+                opacity: 50%;
+            }
+
+        }
+
+        &_info {
+            margin-bottom: 13px;
+
+            &:last-child {
+                margin-top: 17px;
+            }
+        }
+
+        &_common {
+            margin-bottom: 12px;
+
+            a {
+                color: #8F8C8B;
+                transition: $transition;
+                text-decoration: none;
+
+                &:visited, a:active {
+                    color: #8F8C8B;
+                }
+
+                &:hover {
+                    color: #8F8C8B;
+                    opacity: 50%;
+                }
+
+            }
+        }
+    }
+
+    &__links {
+        width: 125px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        color: #B3B3B3;
+        font-size: 18px;
+        transition: $transition;
+        text-decoration: none;
+
+        &:visited, a:active {
+            color: #B3B3B3;
+        }
+
+        &:hover {
+            color: #B3B3B3;
+            opacity: 50%;
+        }
+    }
+}
+// ----- // Footer -----
