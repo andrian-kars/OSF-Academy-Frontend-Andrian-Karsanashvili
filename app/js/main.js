@@ -40,7 +40,8 @@ $(function () {
 
 
 
-
+    // Slick Slider
+    $('.slider-slick__slider').slick();
 
 
 
