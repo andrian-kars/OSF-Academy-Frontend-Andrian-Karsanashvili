@@ -224,7 +224,39 @@ $(function () {
     });
     // ----- // PDP Switcher -----
 
+    // ----- Login & Search PopUp -----
+    $('.login-cart__icon_login').on('click', function (showLogin) {
+        showLogin.preventDefault;
+        $('.modal').toggleClass('modal__show');
+    });
 
+    $('.login-cart__icon_search').on('click', function (showSearch) {
+        showSearch.preventDefault;
+        $('.modal-search').toggleClass('modal__show');
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    const modalLogin = document.querySelector('.modal');
+    const modalSearch = document.querySelector('.modal-search');
+    window.onclick = function (hideLogin) {
+        if (hideLogin.target == modalLogin) {
+            $('.modal').removeClass('modal__show');
+        } else if (hideLogin.target == modalSearch) {
+            $('.modal-search').removeClass('modal__show')
+        }
+    }
+    // Show password
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+    // ----- // Login & Search PopUp -----
 
 
 
