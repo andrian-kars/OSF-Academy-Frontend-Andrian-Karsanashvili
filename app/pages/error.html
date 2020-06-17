@@ -150,18 +150,18 @@
             <!-- Login & Mini-cart -->
             <div class="login-cart">
                 <div class="login-cart__content">
-                    <a class="login-cart__icon" href="../pages/error.html"><img
+                    <span class="login-cart__icon login-cart__icon_search"><img
                             class="login-cart__image login-cart__image_smaller" src="../img/icons/search.png"
                             alt="search"><img
                             class="login-cart__image login-cart__image_smaller login-cart__image_mobile"
-                            src="../img/icons/search-mobile.png" alt="search"></a>
+                            src="../img/icons/search-mobile.png" alt="search"></span>
                 </div>
                 <div class="login-cart__content">
-                    <a class="login-cart__icon" href="../pages/error.html"><img
+                    <span class="login-cart__icon login-cart__icon_login"><img
                             class="login-cart__image login-cart__image_smaller" src="../img/icons/profile.png"
                             alt="profile"><img
                             class="login-cart__image login-cart__image_smaller login-cart__image_mobile"
-                            src="../img/icons/profile-mobile.png" alt="profile"></a>
+                            src="../img/icons/profile-mobile.png" alt="profile"></span>
                 </div>
                 <div class="login-cart__content">
                     <a class="login-cart__icon" href="../pages/error.html"><img class="login-cart__image"
@@ -178,6 +178,40 @@
             </div>
             <!-- // Login & Mini-cart -->
         </div>
+        <!-- Login & Search PopUp -->
+        <div class="modal">
+            <form class="modal__content modal__animate" method="post">
+                <div>
+                    <p class="modal__title">Sign in</p>
+                </div>
+                <div class="modal__main">
+                    <label class="modal__text" for="email">Email</label>
+                    <input class="modal__input" type="email" name="email" required>
+                    <a class="modal__link modal__link_password" href="error.html">forgot password</a>
+                    <label class="modal__text" for="psw">Password</label>
+                    <input id="password" class="modal__input" type="password" name="psw"
+                        pattern="((?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*\W)\w.{4,}\w)" required>
+                    <i id="togglePassword" class="modal__icon fa fa-eye" aria-hidden="true"></i>
+                    <button class="modal__submit" type="submit">Login</button>
+                </div>
+                <div class="modal__footer">
+                    <a class="modal__link modal__link_registration" href="error.html">I don't have an
+                        account</a>
+                </div>
+            </form>
+        </div>
+        <div class="modal-search">
+            <form class="modal-search__content modal__animate" method="post">
+                <p class="error-page__title">Search our site</p>
+                <div class="error-page__search-box">
+                    <input class="error-page__search-text" type="text" name="" placeholder="SEARCH">
+                    <a class="error-page__search-btn" href="error.html">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+        <!-- // Login & Search PopUp -->
     </header>
     <!-- // Header -->
     <!-- Main -->
@@ -227,6 +261,8 @@
             <!-- // Error 404 -->
         </div>
         <!-- // Secondary -->
+        <button class="products__load-more_mobile products__load-more_hide" id="btn-main">Load
+            more</button>
     </main>
     <!-- // Main -->
     <!-- Footer -->
@@ -310,7 +346,7 @@
     <!-- Vendor Scripts -->
     <!-- jQuery, Popper and Bootstap -->
     <script src="../js/libs.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script> -->
     <!-- Custom Scripts -->
     <script src="../js/main.js"></script>
     <!-- Here they go -->
