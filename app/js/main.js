@@ -224,7 +224,7 @@ $(function () {
     });
     // ----- // PDP Switcher -----
 
-    // ----- Login & Search PopUp -----
+    // ----- Login, Search & Cookie PopUp -----
     $('.login-cart__icon_login').on('click', function (showLogin) {
         showLogin.preventDefault;
         $('.modal').toggleClass('modal__show');
@@ -248,7 +248,6 @@ $(function () {
     // Show password
     const togglePassword = document.querySelector('#togglePassword');
     const password = document.querySelector('#password');
-
     togglePassword.addEventListener('click', function (e) {
         // toggle the type attribute
         const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -256,9 +255,21 @@ $(function () {
         // toggle the eye slash icon
         this.classList.toggle('fa-eye-slash');
     });
-    // ----- // Login & Search PopUp -----
-
-
-
-
+    // Cookie
+    if (localStorage.getItem("popupWasShown") == 1) {
+        $('.cookie').removeClass('cookie__show');
+    } else {
+        setTimeout(function () {
+            $('.cookie').addClass('cookie__show');
+        }, 10000);
+        $('.cookie__close').on('click', function (hideCookie) {
+            hideCookie.preventDefault;
+            $('.cookie').removeClass('cookie__show');
+        });
+        $('.cookie__submit').on('click', function (acceptedCookie) {
+            acceptedCookie.preventDefault;
+            localStorage.setItem("popupWasShown", 1);
+        });
+    }
+    // ----- // Login, Search & Cookie PopUp -----
 });

@@ -182,16 +182,16 @@
             </div>
             <!-- // Login & Mini-cart -->
         </div>
-        <!-- Login & Search PopUp -->
+        <!-- Login, Search & Cookie PopUp -->
         <div class="modal">
-            <form class="modal__content modal__animate">
+            <form class="modal__content modal__animate" method="post">
                 <div>
                     <p class="modal__title">Sign in</p>
                 </div>
                 <div class="modal__main">
                     <label class="modal__text" for="email">Email</label>
                     <input class="modal__input" type="email" name="email" required>
-                    <a class="modal__link modal__link_password" href="pages/error.html">forgot password</a>
+                    <a class="modal__link modal__link_password" href="error.html">forgot password</a>
                     <label class="modal__text" for="psw">Password</label>
                     <input id="password" class="modal__input" type="password" name="psw"
                         pattern="((?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*\W)\w.{4,}\w)" required>
@@ -199,7 +199,7 @@
                     <button class="modal__submit" type="submit">Login</button>
                 </div>
                 <div class="modal__footer">
-                    <a class="modal__link modal__link_registration" href="pages/error.html">I don't have an
+                    <a class="modal__link modal__link_registration" href="error.html">I don't have an
                         account</a>
                 </div>
             </form>
@@ -209,13 +209,33 @@
                 <p class="error-page__title">Search our site</p>
                 <div class="error-page__search-box">
                     <input class="error-page__search-text" type="text" name="" placeholder="SEARCH">
-                    <a class="error-page__search-btn" href="pages/error.html">
+                    <a class="error-page__search-btn" href="error.html">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </a>
                 </div>
             </form>
         </div>
-        <!-- // Login & Search PopUp -->
+        <div class="cookie" id="cookie">
+            <form class="cookie__content modal__animate">
+                <div class="cookie__header">
+                    <p class="cookie__title">This website uses cookies</p>
+                    <i class="cookie__close fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="cookie__main">
+                    <p class="cookie__text">OSF uses its own and third-party cookies for statistical purposes, to know
+                        your preferences, for website performance <br>
+                        and interaction with social media offering publicity tailored to your interests. If you continue
+                        browsing, we consider
+                        that you accept its use. <br>
+                        You can expand this information consulting our <a class="cookie__link" href="error.html">Cookies
+                            Policy Page.</a></p>
+                </div>
+                <div class="cookie__footer">
+                    <button class="cookie__submit" type="submit">Accept</button>
+                </div>
+            </form>
+        </div>
+        <!-- // Login, Search & Cookie PopUp -->
     </header>
     <!-- // Header -->
     <!-- Main -->
