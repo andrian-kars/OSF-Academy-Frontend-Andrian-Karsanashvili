@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 
     <!-- Titles -->
-    <title>Error 404</title>
+    <title>Release Date</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -240,47 +240,75 @@
     <main class="main">
         <!-- Secondary -->
         <div class="secondary">
-            <div class="container">
-                <div class="secondary__header">
-                    <div class="secondary__navigation">
-                        <a class="secondary__link" href="../index.html">Home</a>
-                        <span class="secondary__link_devider">/</span>
-                        <a class="secondary__link secondary__link_active">404</a>
+            <div class="countdown container">
+                <div class="countdown__header" id="countdown__header">
+                    <h3 class="countdown__heading">We Will Release OSF Academy</h3>
+                    <p class="countdown__text">We are working hard and estimated release time products below.</p>
+                    <p class="countdown__text">Sed ac tristique nunc, ut gravida nunc. Nulla consequat erat non lectus
+                        imperdiet.</p>
+                </div>
+                <div class="countdown__clock">
+                    <div class="countdown__item">
+                        <svg class="progress-ring">
+                            <circle class="progress-ring__circle" cx="60" cy="60" r="54" />
+                        </svg>
+                        <svg class="progress-ring progress-ring_green">
+                            <circle class="progress-ring__circle progress-ring__circle_green" cx="60" cy="60" r="54" />
+                        </svg>
+                        <span class="countdown__value countdown__value_month" id="month"></span>
+                        <div class="countdown__text_bigger">Months</div>
                     </div>
-                    <div class="secondary__title">
-                        <div class="secondary__line"></div>
-                        <h3 class="secondary__heading">404</h3>
-                        <div class="secondary__line"></div>
+                    <div class="countdown__item">
+                        <svg class="progress-ring">
+                            <circle class="progress-ring__circle" cx="60" cy="60" r="54" />
+                        </svg>
+                        <svg class="progress-ring progress-ring_green">
+                            <circle class="progress-ring__circle progress-ring__circle_green" cx="60" cy="60" r="54" />
+                        </svg>
+                        <span class="countdown__value countdown__value_days" id="day"></span>
+                        <div class="countdown__text_bigger">Days</div>
+                    </div>
+                    <div class="countdown__item">
+                        <svg class="progress-ring">
+                            <circle class="progress-ring__circle" cx="60" cy="60" r="54" />
+                        </svg>
+                        <svg class="progress-ring progress-ring_green">
+                            <circle class="progress-ring__circle progress-ring__circle_green" cx="60" cy="60" r="54" />
+                        </svg>
+                        <span class="countdown__value countdown__value_hours" id="hour"></span>
+                        <div class="countdown__text_bigger">Hours</div>
+                    </div>
+                    <div class="countdown__item">
+                        <svg class="progress-ring">
+                            <circle class="progress-ring__circle" cx="60" cy="60" r="54" />
+                        </svg>
+                        <svg class="progress-ring progress-ring_green">
+                            <circle class="progress-ring__circle progress-ring__circle_green" cx="60" cy="60" r="54" />
+                        </svg>
+                        <span class="countdown__value countdown__value_minutes" id="minute"></span>
+                        <div class="countdown__text_bigger">Minutes</div>
+                    </div>
+                    <div class="countdown__item">
+                        <svg class="progress-ring">
+                            <circle class="progress-ring__circle" cx="60" cy="60" r="54" />
+                        </svg>
+                        <svg class="progress-ring progress-ring_green">
+                            <circle class="progress-ring__circle progress-ring__circle_green" cx="60" cy="60" r="54" />
+                        </svg>
+                        <span class="countdown__value countdown__value_seconds" id="second"></span>
+                        <div class="countdown__text_bigger">Seconds</div>
                     </div>
                 </div>
+                <h3 class="countdown__heading" id="demo"></h3>
+                <form id="countdown__form" class="countdown__form" action="POST" method="post">
+                    <input class="modal__input countdown__input" type="email" name="email"
+                        placeholder="Enter your email to receive the latest announcements">
+                    <input class="modal__input countdown__input countdown__input_mobile" type="email" name="email"
+                        placeholder="Enter email to receive announcements">
+                    <button class="countdown__button" type="submit" form="countdown__form" value="Submit"><i
+                            class="fa fa-angle-right" aria-hidden="true"></i></button>
+                </form>
             </div>
-            <!-- Error 404 -->
-            <div class="container">
-                <div class="error-page">
-                    <div class="error-page__content_left">
-                        <span class="error-page__exclamation">Oops!</span>
-                    </div>
-                    <div class="error-page__content_right">
-                        <p class="error-page__title">Sorry, this page could not be found!</p>
-                        <p class="error-page__subtitle">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                            natoque
-                            penatibus et magnis dis parturient montes, nascetur
-                            ridiculus mus.</p>
-                        <p class="error-page__subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                            commodo
-                            ligula eget dolor. Aenean massa.</p>
-                        <a href="../index.html" class="error-page__link">Go back to Homepage</a>
-                        <p class="error-page__title">Search our site</p>
-                        <div class="error-page__search-box">
-                            <input class="error-page__search-text" type="text" name="" placeholder="SEARCH">
-                            <a class="error-page__search-btn" href="#">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- // Error 404 -->
         </div>
         <!-- // Secondary -->
         <button class="products__load-more_mobile products__load-more_hide" id="btn-main">Load
@@ -371,6 +399,7 @@
     <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script> -->
     <!-- Custom Scripts -->
     <script src="../js/main.js"></script>
+    <script src="../js/release.js"></script>
     <!-- Here they go -->
 </body>
 
