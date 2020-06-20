@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 
     <!-- Titles -->
-    <title>Release Date</title>
+    <title>Shopping Cart</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -240,75 +240,111 @@
     <main class="main">
         <!-- Secondary -->
         <div class="secondary">
-            <div class="countdown container">
-                <div class="countdown__header" id="countdown__header">
-                    <h3 class="countdown__heading">We Will Release OSF Academy</h3>
-                    <p class="countdown__text">We are working hard and estimated release time products below.</p>
-                    <p class="countdown__text">Sed ac tristique nunc, ut gravida nunc. Nulla consequat erat non lectus
-                        imperdiet.</p>
-                </div>
-                <div class="countdown__clock">
-                    <div class="countdown__item">
-                        <svg class="progress-ring">
-                            <circle class="progress-ring__circle" cx="60" cy="60" r="54" />
-                        </svg>
-                        <svg class="progress-ring progress-ring_green">
-                            <circle class="progress-ring__circle progress-ring__circle_green" cx="60" cy="60" r="54" />
-                        </svg>
-                        <span class="countdown__value countdown__value_month" id="month"></span>
-                        <div class="countdown__text_bigger">Months</div>
+            <div class="container">
+                <div class="secondary__header">
+                    <div class="secondary__navigation">
+                        <a class="secondary__link" href="../index.html">Home</a>
+                        <span class="secondary__link_devider">/</span>
+                        <a class="secondary__link secondary__link_active">Shopping Cart</a>
                     </div>
-                    <div class="countdown__item">
-                        <svg class="progress-ring">
-                            <circle class="progress-ring__circle" cx="60" cy="60" r="54" />
-                        </svg>
-                        <svg class="progress-ring progress-ring_green">
-                            <circle class="progress-ring__circle progress-ring__circle_green" cx="60" cy="60" r="54" />
-                        </svg>
-                        <span class="countdown__value countdown__value_days" id="day"></span>
-                        <div class="countdown__text_bigger">Days</div>
-                    </div>
-                    <div class="countdown__item">
-                        <svg class="progress-ring">
-                            <circle class="progress-ring__circle" cx="60" cy="60" r="54" />
-                        </svg>
-                        <svg class="progress-ring progress-ring_green">
-                            <circle class="progress-ring__circle progress-ring__circle_green" cx="60" cy="60" r="54" />
-                        </svg>
-                        <span class="countdown__value countdown__value_hours" id="hour"></span>
-                        <div class="countdown__text_bigger">Hours</div>
-                    </div>
-                    <div class="countdown__item">
-                        <svg class="progress-ring">
-                            <circle class="progress-ring__circle" cx="60" cy="60" r="54" />
-                        </svg>
-                        <svg class="progress-ring progress-ring_green">
-                            <circle class="progress-ring__circle progress-ring__circle_green" cx="60" cy="60" r="54" />
-                        </svg>
-                        <span class="countdown__value countdown__value_minutes" id="minute"></span>
-                        <div class="countdown__text_bigger">Minutes</div>
-                    </div>
-                    <div class="countdown__item">
-                        <svg class="progress-ring">
-                            <circle class="progress-ring__circle" cx="60" cy="60" r="54" />
-                        </svg>
-                        <svg class="progress-ring progress-ring_green">
-                            <circle class="progress-ring__circle progress-ring__circle_green" cx="60" cy="60" r="54" />
-                        </svg>
-                        <span class="countdown__value countdown__value_seconds" id="second"></span>
-                        <div class="countdown__text_bigger">Seconds</div>
+                    <div class="secondary__title">
+                        <div class="secondary__line secondary__line_short"></div>
+                        <h3 class="secondary__heading secondary__heading_long">Shopping Cart</h3>
+                        <div class="secondary__line secondary__line_short"></div>
                     </div>
                 </div>
-                <h3 class="countdown__heading" id="demo"></h3>
-                <form id="countdown__form" class="countdown__form" action="POST" method="post">
-                    <input class="modal__input countdown__input" type="email" name="email"
-                        placeholder="Enter your email to receive the latest announcements">
-                    <input class="modal__input countdown__input countdown__input_mobile" type="email" name="email"
-                        placeholder="Enter email to receive announcements">
-                    <button class="countdown__button" type="submit" form="countdown__form" value="Submit"><i
-                            class="fa fa-angle-right" aria-hidden="true"></i></button>
-                </form>
             </div>
+            <!-- Shopping Cart -->
+            <div class="cart-page container">
+                <div class="cart-page__products">
+                    <div class="cart-page__product">
+                        <div class="cart-page__image">
+                        </div>
+                        <div class="cart-page__description">
+                            <div class="cart-page__name">Kristina Dam Oak Table With White Marble Top</div>
+                            <div class="cart-page__price">$2195.00</div>
+                        </div>
+                        <div class="counter-button">
+                            <input type="button" value="-" class="button-minus" data-field="quantity">
+                            <input class="cart-page__quantity quantity-field" type="number" step="1" max="100" value="1"
+                                name="quantity">
+                            <input type="button" value="+" class="button-plus" data-field="quantity">
+                        </div>
+                        <div class="cart-page__price_counted">$2195</div>
+                        <div class="cart-page__delete-product"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="cart-page__product">
+                        <div class="cart-page__image">
+                        </div>
+                        <div class="cart-page__description">
+                            <div class="cart-page__name">Activate Facial Mask and Charcoal Soap</div>
+                            <div class="cart-page__price">$1249.00</div>
+                        </div>
+                        <div class="counter-button">
+                            <input type="button" value="-" class="button-minus" data-field="quantity">
+                            <input class="cart-page__quantity quantity-field" type="number" value="1" name="quantity">
+                            <input type="button" value="+" class="button-plus" data-field="quantity">
+                        </div>
+                        <div class="cart-page__price_counted">$1249</div>
+                        <div class="cart-page__delete-product"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <div class="cart-page__purchase">
+                    <form class="cart-page__coupone" action="GET" method="get">
+                        <input class="cart-page__input" type="text" name="coupone" placeholder="Enter Coupone Code">
+                        <button class="cart-page__button" type="submit" form="cart-page__coupone"
+                            value="Submit">Apply</button>
+                    </form>
+                    <div class="calculator">
+                        <div class="calculator__buttons">
+                            <button class="calculator__update">Update Cart</button>
+                            <button class="calculator__purchase">Proceed to Checkout</button>
+                        </div>
+                        <div class="calculator__price_without-shipping">
+                            <span class="calculator__text calculator__text_regular">Cart Subtotal:</span>
+                            <span class="calculator__subtotal">$3444</span>
+                        </div>
+                        <div class="shipping">
+                            <span class="calculator__text">Shipping and Handling:</span>
+                            <form class="shipping__form" action="">
+                                <label class="shipping__label" for="option1">Flat Rate:
+                                    <span class="calculator__text">$10.00</span>
+                                    <input class="shipping__input" type="radio" id="option1" name="selector"
+                                        value="Flat-rate">
+                                    <span class="shipping__checkmark"></span>
+                                </label>
+                                <label class="shipping__label" for="option2"> Free Shipping
+                                    <input class="shipping__input" type="radio" id="option2" name="selector"
+                                        value="Free-shipping">
+                                    <span class="shipping__checkmark"></span>
+                                </label>
+                                <label class="shipping__label" for="option3"> International:
+                                    <span class="calculator__text">$60.00</span>
+                                    <input class="shipping__input" type="radio" id="option3" name="selector"
+                                        value="International">
+                                    <span class="shipping__checkmark"></span>
+                                </label>
+                                <label class="shipping__label" for="option4"> Local Delivery:
+                                    <span class="calculator__text">$5.00</span>
+                                    <input class="shipping__input" type="radio" id="option4" name="selector"
+                                        value="Local-delivery">
+                                    <span class="shipping__checkmark"></span>
+                                </label>
+                                <label class="shipping__label" for="option5">Local Pickup (Free)
+                                    <input class="shipping__input" type="radio" id="option5" name="selector"
+                                        value="Local-pickup">
+                                    <span class="shipping__checkmark"></span>
+                                </label>
+                            </form>
+                        </div>
+                        <div class="calculator__price">
+                            <span class="calculator__text">Order Total:</span>
+                            <span class="calculator__total">$3489</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // Shopping Cart -->
         </div>
         <!-- // Secondary -->
     </main>
@@ -397,7 +433,7 @@
     <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script> -->
     <!-- Custom Scripts -->
     <script src="../js/main.js"></script>
-    <script src="../js/release.js"></script>
+    <script src="../js/store.js"></script>
     <!-- Here they go -->
 </body>
 
