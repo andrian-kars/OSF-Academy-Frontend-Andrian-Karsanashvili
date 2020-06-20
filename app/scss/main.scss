@@ -778,6 +778,23 @@
     align-items: center;
     justify-content: center;
 
+    &__link {
+        color: $bg-osf;
+        transition: $transition;
+        margin-top: 20px;
+
+        &:visited, &:focus {
+            color: $bg-osf;
+            text-decoration: none;
+        }
+
+        &:hover, &:active {
+            opacity: 0.7;
+            text-decoration: none;
+        }
+
+    }
+
     &__content {
         background-color: $white;
         color: $osf-brown;
@@ -1468,16 +1485,13 @@
         @media only screen and (min-width: 768px) {
             display: flex;
         }
-
-        @media only screen and (min-width: 1280px) {
-
-        }
     }
 
     &__item {
         position: relative;
         height: 365px;
         width: auto;
+        min-width: 300px;
         margin-bottom: 30px;
     }
     
@@ -1897,6 +1911,18 @@
         min-width: 0;
         margin-top: 0;
         padding: 37px 0 34px;
+    }
+
+    .products__button {
+        padding: 0;
+        height: 80px;
+        width: 80px;
+        text-align: center;
+
+        img {
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 
     &__head-whrapper {
@@ -3416,10 +3442,11 @@
         }
 
         .button-minus {
+            padding: 0;
             outline: none;
             border: none;
             background-color: transparent;
-            margin-left: 13px;
+            margin-left: 18px;
             font-size: 18px;
             font-weight: 700;
             color: $bg-grey;
@@ -3439,11 +3466,12 @@
         }
 
         .button-plus {
+            padding: 0;
             font-size: 18px;
             outline: none;
             border: none;
             background-color: transparent;
-            margin-right: 13px;
+            margin-right: 18px;
             font-weight: 700;
             color: $bg-grey;
 
@@ -3559,7 +3587,8 @@
 
 .go-top {
     text-decoration: none;
-    width: 171px;
+    text-align: center;
+    width: 174px;
 
     @media only screen and (min-width: 992px) {
         display: none;
@@ -3877,3 +3906,195 @@
         }
 }
 // ----- // Product Detailed Page -----
+
+// ----- Release Date -----
+.countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    padding: 30px 0;
+    color: $osf-brown;
+
+    @media only screen and (min-width: 768px) {
+        padding: 60px 0;
+    }
+
+    &__header {
+        padding-bottom: 20px;
+
+        @media only screen and (min-width: 470px) {
+            padding-bottom: 20px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            padding-bottom: 80px;
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 900;
+        margin-bottom: 5px;
+
+        @media only screen and (min-width: 470px) {
+            font-size: 24px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        margin: 0;
+        font-size: 10px;
+
+        @media only screen and (min-width: 470px) {
+            font-size: 12px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            font-size: 14px;
+        }
+
+        &_bigger {
+            font-size: 11px;
+            text-align: center;
+
+            @media only screen and (min-width: 768px) {
+                font-size: 18px;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &__clock {
+        display: flex;
+    }
+
+    &__value {
+        font-size: 36px;
+        font-weight: 900;
+
+        @media only screen and (min-width: 470px) {
+            font-size: 36px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            font-size: 48px;
+        }
+
+        &_seconds {
+            // margin-right: 0;
+        }
+    }
+
+    &__item {
+        position: relative;
+        margin-right: 14px;
+        width: 42px;
+        
+
+        @media only screen and (min-width: 470px) {
+            margin-right: 25px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            margin-right: 65px;
+            width: 56px;
+        }
+
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .progress-ring {
+        display: none;
+        position: absolute;
+        left: -33px;
+        top: -25px;
+        z-index: 2;
+        width: 118px;
+        height: 118px;
+
+        @media only screen and (min-width: 768px) {
+            display: block;
+        }
+
+        &_green {
+            z-index: 3;
+        }
+
+        &__circle {
+                stroke-width: 3;
+                stroke: #B5BDC3;
+                fill: none;
+                transform-origin: center;
+                transform: rotate(-90deg);
+            &_green {
+                stroke: #63BD00;
+            }
+        }
+    }
+
+    &__form {
+        position: relative;
+        margin-top: 30px;
+
+        @media only screen and (min-width: 768px) {
+            margin-top: 90px;
+        }
+    }
+
+    &__input {
+        display: none;
+
+        @media only screen and (min-width: 768px) {
+            display: inline-block;
+            width: 490px;
+        }
+
+        &_mobile {
+            display: inline-block;
+            width: 300px;
+
+            @media only screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    &__button {
+        color: $bg-osf;
+        position: absolute;
+        right: 7px;
+        top: 4.5px;
+        border: none;
+        border-radius: 20px;
+        background-color: transparent;
+
+        &:active, &:hover, &:focus {
+            outline: none;  
+        }
+
+        & i {
+            border: 1px solid $bg-osf;
+            font-size: 20px;
+            padding: 0px 6px 1px 8px;
+            border-radius: 20px;
+            transition: $transition;
+
+            &:active, &:hover {
+                background-color: $bg-osf;
+                color: $white;
+            }
+        }
+    }
+}
+// ----- // Release Date -----

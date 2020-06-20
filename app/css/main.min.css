@@ -12093,6 +12093,24 @@ input::-webkit-inner-spin-button {
   justify-content: center;
 }
 
+.modal-search__link {
+  color: #63BD00;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  margin-top: 20px;
+}
+
+.modal-search__link:visited, .modal-search__link:focus {
+  color: #63BD00;
+  text-decoration: none;
+}
+
+.modal-search__link:hover, .modal-search__link:active {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
 .modal-search__content {
   background-color: #FFF;
   color: #453F3B;
@@ -12917,6 +12935,7 @@ input::-webkit-inner-spin-button {
   position: relative;
   height: 365px;
   width: auto;
+  min-width: 300px;
   margin-bottom: 30px;
 }
 
@@ -13400,6 +13419,18 @@ input::-webkit-inner-spin-button {
     margin-top: 0;
     padding: 37px 0 34px;
   }
+}
+
+.slider-slick .products__button {
+  padding: 0;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+}
+
+.slider-slick .products__button img {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .slider-slick__head-whrapper {
@@ -15218,10 +15249,11 @@ input::-webkit-inner-spin-button {
 }
 
 .product-page__buttons .button-minus {
+  padding: 0;
   outline: none;
   border: none;
   background-color: transparent;
-  margin-left: 13px;
+  margin-left: 18px;
   font-size: 18px;
   font-weight: 700;
   color: #9A9A9A;
@@ -15243,11 +15275,12 @@ input::-webkit-inner-spin-button {
 }
 
 .product-page__buttons .button-plus {
+  padding: 0;
   font-size: 18px;
   outline: none;
   border: none;
   background-color: transparent;
-  margin-right: 13px;
+  margin-right: 18px;
   font-weight: 700;
   color: #9A9A9A;
 }
@@ -15379,7 +15412,8 @@ input::-webkit-inner-spin-button {
 
 .go-top {
   text-decoration: none;
-  width: 171px;
+  text-align: center;
+  width: 174px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -15712,4 +15746,238 @@ input::-webkit-inner-spin-button {
     color: #000 !important;
     margin-bottom: 7px;
   }
+}
+
+.countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #FFF;
+  padding: 30px 0;
+  color: #453F3B;
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown {
+    padding: 60px 0;
+  }
+}
+
+.countdown__header {
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 470px) {
+  .countdown__header {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown__header {
+    padding-bottom: 80px;
+  }
+}
+
+.countdown__heading {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 470px) {
+  .countdown__heading {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown__heading {
+    font-size: 30px;
+  }
+}
+
+.countdown__text {
+  text-align: center;
+  margin: 0;
+  font-size: 10px;
+}
+
+@media only screen and (min-width: 470px) {
+  .countdown__text {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown__text {
+    font-size: 14px;
+  }
+}
+
+.countdown__text_bigger {
+  font-size: 11px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown__text_bigger {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+}
+
+.countdown__clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.countdown__value {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+@media only screen and (min-width: 470px) {
+  .countdown__value {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown__value {
+    font-size: 48px;
+  }
+}
+
+.countdown__item {
+  position: relative;
+  margin-right: 14px;
+  width: 42px;
+}
+
+@media only screen and (min-width: 470px) {
+  .countdown__item {
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown__item {
+    margin-right: 65px;
+    width: 56px;
+  }
+}
+
+.countdown__item:last-child {
+  margin-right: 0;
+}
+
+.countdown .progress-ring {
+  display: none;
+  position: absolute;
+  left: -33px;
+  top: -25px;
+  z-index: 2;
+  width: 118px;
+  height: 118px;
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown .progress-ring {
+    display: block;
+  }
+}
+
+.countdown .progress-ring_green {
+  z-index: 3;
+}
+
+.countdown .progress-ring__circle {
+  stroke-width: 3;
+  stroke: #B5BDC3;
+  fill: none;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.countdown .progress-ring__circle_green {
+  stroke: #63BD00;
+}
+
+.countdown__form {
+  position: relative;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown__form {
+    margin-top: 90px;
+  }
+}
+
+.countdown__input {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown__input {
+    display: inline-block;
+    width: 490px;
+  }
+}
+
+.countdown__input_mobile {
+  display: inline-block;
+  width: 300px;
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown__input_mobile {
+    display: none;
+  }
+}
+
+.countdown__button {
+  color: #63BD00;
+  position: absolute;
+  right: 7px;
+  top: 4.5px;
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.countdown__button:active, .countdown__button:hover, .countdown__button:focus {
+  outline: none;
+}
+
+.countdown__button i {
+  border: 1px solid #63BD00;
+  font-size: 20px;
+  padding: 0px 6px 1px 8px;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.countdown__button i:active, .countdown__button i:hover {
+  background-color: #63BD00;
+  color: #FFF;
 }
