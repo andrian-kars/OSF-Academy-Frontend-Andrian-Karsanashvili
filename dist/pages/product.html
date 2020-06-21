@@ -844,11 +844,9 @@
                 cartCounterNumber = parseFloat(cartCounter.innerHTML)
                 inputValue = parseFloat(input.value)
                 console.log(inputValue)
-                if (cartCounter.innerHTML < 99 && input == 1) {
-                    cartCounter.innerHTML = cartCounterNumber + 1
-                } else if (cartCounter.innerHTML < 99 && inputValue > 1) {
+                if (cartCounter.innerHTML < 99 && inputValue >= 1) {
                     cartCounter.innerHTML = cartCounterNumber + inputValue
-                } if (cartCounter.innerHTML > 99) {
+                } else if (cartCounter.innerHTML > 99) {
                     cartCounter.innerHTML = 99
                 }
             }
