@@ -193,7 +193,7 @@
                     <a class="modal__link modal__link_password" href="error.html">forgot password</a>
                     <label class="modal__text" for="psw">Password</label>
                     <input id="password" class="modal__input" type="password" name="psw"
-                        pattern="((?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*\W)\w.{4,}\w)" required>
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" required>
                     <i id="togglePassword" class="modal__icon fa fa-eye" aria-hidden="true"></i>
                     <button class="modal__submit" type="submit">Login</button>
                 </div>
